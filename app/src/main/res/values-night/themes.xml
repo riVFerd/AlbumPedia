@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MusicPedia" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#90a4ae</item>
+        <item name="colorPrimaryVariant">#62757f</item>
+        <item name="colorOnPrimary">#c1d5e0</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#9fa8da</item>
+        <item name="colorSecondaryVariant">#6f79a8</item>
+        <item name="colorOnSecondary">#d1d9ff</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

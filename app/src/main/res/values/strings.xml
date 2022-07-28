@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AlbumList</string>
+    <string name="favorite_button_desc">favorit button</string>
+    <string name="profile_name">Virgy Ferdian</string>
+    <string name="profile_email">virgyferdian213@gmail.com</string>
+    <string name="album_art_desc">album art picture</string>
+    <string name="year_textlabel">Release year :</string>
+    <string name="artist_textlabel">Artist :</string>
+    <string name="number_of_song">Number of Song :</string>
+    <string name="tracklist">Tracklist</string>
+    <string name="spotify_text">Listen on</string>
+</resources>

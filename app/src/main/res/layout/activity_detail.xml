@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    tools:context=".DetailActivity"
+    android:padding ="14dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp"
+            tools:text="Daydream"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_album_art"
+                android:layout_width="172dp"
+                android:layout_height="172dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentStart="true"
+                tools:src="@drawable/daydream_aimer"
+                android:contentDescription="@string/album_art_desc" />
+
+            <TextView
+                android:id="@+id/tv_artist_textlabel"
+                style="@style/LabelText"
+                android:layout_toEndOf="@id/img_album_art"
+                android:layout_alignTop="@id/img_album_art"
+                android:text="@string/artist_textlabel"/>
+
+            <TextView
+                android:id="@+id/tv_artist_name"
+                style="@style/LabelText.MainText"
+                android:layout_toEndOf="@id/img_album_art"
+                android:layout_below="@id/tv_artist_textlabel"
+                tools:text="Aimer"/>
+
+            <TextView
+                android:id="@+id/tv_year_textlabel"
+                style="@style/LabelText"
+                android:layout_toEndOf="@id/img_album_art"
+                android:layout_below="@id/tv_artist_name"
+                android:text="@string/year_textlabel"/>
+
+            <TextView
+                android:id="@+id/tv_year"
+                style="@style/LabelText.MainText"
+                android:layout_below="@id/tv_year_textlabel"
+                android:layout_toEndOf="@id/img_album_art"
+                tools:text="2022"/>
+
+            <TextView
+                android:id="@+id/tv_songs_textlabel"
+                style="@style/LabelText"
+                android:layout_toEndOf="@id/img_album_art"
+                android:layout_below="@id/tv_year"
+                android:text="@string/number_of_song"/>
+
+            <TextView
+                android:id="@+id/tv_album_size"
+                style="@style/LabelText.MainText"
+                android:textSize="16sp"
+                android:layout_toEndOf="@id/tv_songs_textlabel"
+                android:layout_alignTop="@id/tv_songs_textlabel"
+                android:layout_marginStart="8dp"
+                tools:text="13"/>
+
+            <Button
+                android:id="@+id/btn_spotify"
+                style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_songs_textlabel"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/img_album_art"
+                android:contentDescription="@string/favorite_button_desc"
+                android:drawableEnd="@drawable/ic_spotify_icon"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/white"
+                android:text="@string/spotify_text" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="@string/tracklist"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_song_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginTop="4dp"
+            tools:listitem="@layout/item_list_song"/>
+
+    </LinearLayout>
+
+</ScrollView>
